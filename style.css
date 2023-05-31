@@ -7,10 +7,53 @@
 
 header nav {
     display: flex;
-    background: #d61919;
+    background: #898989;
     color: #e6e3e3;
     justify-content: space-around;
-    /* padding: 20px; */
     height: 50px;
     align-items: center;
 }
+
+nav .nav-menu {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+header nav ul li a:hover {
+    color: #cfcece;
+    text-decoration: none;
+    font-size: 0.5cm;
+}
+
+header nav ul li a {
+    color: #e9e9e9;
+    text-decoration: none;
+    font-size: 0.5cm;
+}
+
+.middle {
+    background-color: #404040;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.middle .middle-right {
+    max-width: 58rem;
+    padding: 1.8rem 16%;
+}
+
+.middle-right  h1{
+    text-shadow: 1px 1px 3px rgba(54, 15, 15, 0.5);
+    font-size: 2.5em;
+}
+
+.middle-right p {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  }
