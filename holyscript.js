@@ -43,7 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let start_btn = document.querySelector(".start-btn")
 
+    let sound_btn_on = document.querySelector(".sound-button.on")
+    let sound_btn = document.querySelector(".sound-button")
+    let sound_btn_off = document.querySelector(".sound-button.off")
+
     let nav = document.querySelector(".nav")
+
+    let nav_btn = document.querySelector(".nav-btn")
 
     let bgm = document.getElementById("bgm")
 
@@ -52,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hide(about)
         hide(contact)
         hide(projlist)
-        document.getElementById("background-ost").play()
     }, false)
 
     start_btn.addEventListener('click', function () {
@@ -61,6 +66,20 @@ document.addEventListener('DOMContentLoaded', () => {
         hide(start_btn)
         bgm.play()
     }, false)
+
+    // sound_btn.addEventListener('click', function () {
+    //     if (sound_btn_on) {
+    //         sound_btn_on.classList.remove("on")
+    //         sound_btn.classList.add("off")
+    //         bgm.pause()
+    //         bgm.currentTime = 0;
+    //     } if (sound_btn_off) {
+    //         sound_btn_off.classList.remove("off")
+    //         sound_btn.classList.add("on")
+    //         bgm.play()
+    //     }
+        
+    // })
 
     about_btn.addEventListener('click', function() {
         show(about)
@@ -82,5 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
         hide(about)
         hide(contact)
     }, false)
+
+    nav_btn.addEventListener('click', function() {
+        document.querySelector('.nav-menu').classList.toggle('toggled');
+    })
 
 })
