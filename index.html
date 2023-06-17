@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Web Page</title>
+    <title>The P.D.P.A</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="holyscript.js"></script>
 </head>
-<body>
+<body onload="timercountdown()">
     <header>
-        <nav>
+        <nav class="nav hidden">
             <section class="nav-title">
                 <div class="nav-title-text">
-                    <h1>The Project Archive</h1>
+                    <h1>P.D.P.A</h1>
                 </div>
             </section>
+
+            <audio id="bgm" autoplay loop>
+                <source src="./audio/music/comustnost.mp3" type="audio/mp3" id="sound">
+            </audio>
 
             <ul class="nav-menu">
                 <br>
@@ -34,40 +38,44 @@
         <div class="middle-left">
             <section class="about-desc hidden">
                 <h1>About Myself</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, aut, quam odit sed modi earum neque adipisci aliquam, explicabo accusantium rem accusamus? Quaerat, nihil? At.</p>
+                <p>My name is Michael Abyzein, I'm currently a computer science student at High School and I've already fascinated on this field since I was an 8th grader. At the moment, I have learned about Python, Pygame, HTML, FLASK, Jinja, and REACT.</p>
             </section>
         </div>
         <div class="middle-center">
+            <div class="loader"></div>
+            <button class="start-btn hidden">Start</button>
             <section class="contact-desc hidden">
                 <h1>My Contact</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, aut, quam odit sed modi earum neque adipisci aliquam, explicabo accusantium rem accusamus? Quaerat, nihil? At.</p>
+                <br></br>
+                <p>Here are some of my current available contact: </p>
+                <p>Email : <a href="mailto:michaelabyzein2006@gmail.com" class="special-hyperlink">michaelabyzein2006@gmail.com</a></p>
             </section>
             <div class="project-list hidden">
                 <div class="list-title">
-                    <h1>Here's my project</h1>
+                    <h1>Here's my recent project</h1>
                 </div>
                 <ul class="list">
                     <li>
                         <img src="https://cdn.discordapp.com/attachments/586122410613276681/1119153229645754408/battleship_thumbnail.png"></img>
                         <div class="project-desc">
                             <h2>Battleship on Python</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto asperiores optio perferendis impedit cum! Qui.</p>
-                            <a href="javascript:void(0)">View Page</a>
+                            <p>A functional console version of Battleship, running on Python.</p>
+                            <a href="https://github.com/MichaelAbyzein/School-Repositories/blob/2021/00_PROCEDURAL_PROGRAMMING/68_battleShipRecursion.py">View on Github</a>
                         </div>
                     </li>
                     <li>
                         <img src="https://cdn.discordapp.com/attachments/586122410613276681/1119153230191013948/restaulist-thumb.png"></img>
                         <div class="project-desc">
                             <h2>Ordering List Python</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto asperiores optio perferendis impedit cum! Qui.</p>
-                            <a href="javascript:void(0)">View Page</a>
+                            <p>A Simple Ordering List on Python which rellies on JSON as its data storage.</p>
+                            <a href="https://github.com/MichaelAbyzein/School-Repositories/tree/2021/Project/20.11.21">View on Github</a>
                         </div>
                     </li>
                     <li>
                         <img src="https://cdn.discordapp.com/attachments/586122410613276681/1119153229914198046/treasurehunt-thumb.png"></img>
                         <div class="project-desc">
                             <h2>Treasure Hunt HTML</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto asperiores optio perferendis impedit cum! Qui.</p>
+                            <p>A Simple Click Game on HTML, its very oversized ngl.</p>
                             <a href="./runable-projects/treasure-hunt/index.html">View Page</a>
                         </div>
                     </li>
@@ -75,7 +83,7 @@
                         <img src="https://cdn.discordapp.com/attachments/586122410613276681/1119153230862090340/trashgame-thumb.png"></img>
                         <div class="project-desc">
                             <h2>Trash Game</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto asperiores optio perferendis impedit cum! Qui.</p>
+                            <p>A Group Project on making a game on HTML. Shout out to Zef for making the art!</p>
                             <a href="./runable-projects/trash-game/index.html">View Page</a>
                         </div>
                     </li>
@@ -83,7 +91,7 @@
                         <img src="https://cdn.discordapp.com/attachments/586122410613276681/1119153230455263232/therapysite-thumb.png"></img>
                         <div class="project-desc">
                             <h2>Albatross Therapy Site (HTML Version)</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto asperiores optio perferendis impedit cum! Qui.</p>
+                            <p>My very first large scale HTML Project, pretty basic in design and still unfunctional.</p>
                             <a href="./runable-projects/therapy-website/index.html">View Page</a>
                         </div>
                     </li>
@@ -91,7 +99,7 @@
                         <img src="https://cdn.discordapp.com/attachments/586122410613276681/1119297836576673873/image.png"></img>
                         <div class="project-desc">
                             <h2>Hangman React</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto asperiores optio perferendis impedit cum! Qui.</p>
+                            <p>A Hangman Game which run on React, kinda buggy and still in testing.</p>
                             <a href="https://michaelabyzein.github.io/hangmanreact">View Page</a>
                         </div>
                     </li>
@@ -99,8 +107,8 @@
             </div>
         </div>
         <div class="middle-right">
-            <section class="home-desc">
-                <h1>Welcome to The Project Archive</h1>
+            <section class="home-desc hidden">
+                <h1>Welcome to The Privatized Digital Project Archive</h1>
                 <p>This is the place where I keep most of my achievement. Currently, it's mostly my Python, HTML, React, and FLASK Projects.</p>
             </section>
         </div>

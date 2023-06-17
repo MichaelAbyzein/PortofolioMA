@@ -16,6 +16,17 @@ function hide(desc) {
     }
 }
 
+function timercountdown(){
+    timevar = setTimeout(showstart, 3000);
+}
+
+function showstart(){
+    let start_btn = document.querySelector(".start-btn")
+    let loader = document.querySelector(".loader")
+    show(start_btn)
+    hide(loader)
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
     let home = document.querySelector('.home-desc');
@@ -30,11 +41,25 @@ document.addEventListener('DOMContentLoaded', () => {
     let projlist = document.querySelector('.project-list')
     let proj_btn = document.querySelector('.archive-btn')
 
+    let start_btn = document.querySelector(".start-btn")
+
+    let nav = document.querySelector(".nav")
+
+    let bgm = document.getElementById("bgm")
+
     home_btn.addEventListener('click', function() {
         show(home)
         hide(about)
         hide(contact)
         hide(projlist)
+        document.getElementById("background-ost").play()
+    }, false)
+
+    start_btn.addEventListener('click', function () {
+        show(home)
+        show(nav)
+        hide(start_btn)
+        bgm.play()
     }, false)
 
     about_btn.addEventListener('click', function() {
