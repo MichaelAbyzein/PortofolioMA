@@ -278,6 +278,7 @@ header nav ul li a {
 }
 
 /* MOBILE SUPPORT */
+
 @media screen and (max-width: 576px) {
     /* NAV MENU */
     
@@ -316,8 +317,10 @@ header nav ul li a {
     }
     
     header nav ul li a {
+        position: relative;
         padding-left: 10%;
         font-size: 0.25cm;
+        z-index: 100;
     }
 
     .nav-btn {
@@ -338,25 +341,26 @@ header nav ul li a {
     }
     
     .list img {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
         margin: 2px;
         border: 1px dotted #59C7C2;
     }
 
     .list {
         margin-right: 40%;
+        width: 32vh;
     }
 
     .project-list {
-        width: 55vh;
-        height: 100vh;
+        width: 35vh;
+        height: 98vh;
         left: 3%;
         top: 10%;
     }
     
     .list li {
-        margin: 4px;
+        margin: 1px;
     }
     
     .project-desc {
@@ -364,23 +368,23 @@ header nav ul li a {
     }
 
     .project-desc h2 {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .project-desc p {
         margin: 0;
         font-size: 10px;
-        min-width: 50%;
+        min-width: 25%;
     }
     
     .project-desc a {
         border: 1px solid #59C7C2;
-        width: 72px;
+        width: 48px;
     }
     
     .project-desc a:hover {
         border: 1px solid #FFFFFF;
-        width: 72px;
+        width: 48px;
     }
 
     /* FONT SIZE */
