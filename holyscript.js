@@ -43,15 +43,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let start_btn = document.querySelector(".start-btn")
 
-    let sound_btn_on = document.querySelector(".sound-button.on")
-    let sound_btn = document.querySelector(".sound-button")
-    let sound_btn_off = document.querySelector(".sound-button.off")
+    let about_tile = document.querySelector(".mobile-nav-btn.about")
+    let home_tile = document.querySelector(".mobile-nav-btn.home")
+    let archive_tile = document.querySelector(".mobile-nav-btn.archive")
+    let contact_tile = document.querySelector(".mobile-nav-btn.contact")
+
+    // let sound_btn_on = document.querySelector(".sound-button.on")
+    // let sound_btn = document.querySelector(".sound-button")
+    // let sound_btn_off = document.querySelector(".sound-button.off")
 
     let nav = document.querySelector(".nav")
 
     let nav_btn = document.querySelector(".nav-btn")
 
     let bgm = document.getElementById("bgm")
+
+    home_tile.addEventListener('click', function() {
+        show(home)
+        hide(about)
+        hide(contact)
+        hide(projlist)
+    }, false)
+
+    about_tile.addEventListener('click', function() {
+        show(about)
+        hide(home)
+        hide(contact)
+        hide(projlist)
+    }, false)
+
+    archive_tile.addEventListener('click', function() {
+        show(projlist)
+        hide(about)
+        hide(contact)
+        hide(home)
+    }, false)
+
+    contact_tile.addEventListener('click', function() {
+        show(contact)
+        hide(about)
+        hide(projlist)
+        hide(home)
+    }, false)
 
     home_btn.addEventListener('click', function() {
         show(home)
@@ -66,20 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hide(start_btn)
         bgm.play()
     }, false)
-
-    // sound_btn.addEventListener('click', function () {
-    //     if (sound_btn_on) {
-    //         sound_btn_on.classList.remove("on")
-    //         sound_btn.classList.add("off")
-    //         bgm.pause()
-    //         bgm.currentTime = 0;
-    //     } if (sound_btn_off) {
-    //         sound_btn_off.classList.remove("off")
-    //         sound_btn.classList.add("on")
-    //         bgm.play()
-    //     }
-        
-    // })
 
     about_btn.addEventListener('click', function() {
         show(about)
